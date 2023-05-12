@@ -23,7 +23,7 @@ import 'react-quill/dist/quill.snow.css';
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/questions",
+      await axios.post(`${process.env.REACT_APP_base_url}/api/questions`,
         {
           id:userData.user.id,
           question: form.question,

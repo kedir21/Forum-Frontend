@@ -14,7 +14,7 @@ const Home = () => {
   const Questions = async () => {
     try {
       const questionRes = await axios.get(
-        "http://localhost:4000/api/questions"
+        `${process.env.REACT_APP_base_url}/api/questions`
       );
       setAllQuestions(questionRes.data.data);
     } catch (err) {
